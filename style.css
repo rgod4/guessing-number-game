@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+body {
+    background-color: burlywood;
+}
+h1,p{
+    text-align: center;
+    padding: 5px 0px;
+    margin: auto;
+}
+#gamebox{
+    width: 60%;
+    margin: auto;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    margin: 15px 10px;
+}
+.resultParas{
+    display: flex;
+    flex-direction: column;
+}
+input[type="number"]{
+    margin: 0px 5px;
+    border-color: black;
+}
+input[type="number"]:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+input{
+    border-radius: 5px;
+}
+.correct{
+    background-color: green;
+    width: 42%;
+}
+.wrong{
+    background-color: red;
+    width: 42%;
+}
+.reset{
+    margin: auto;
+}
