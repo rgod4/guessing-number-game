@@ -41,35 +41,36 @@ function check(){
     let guessnum=Number(field.value);
     guessmade++;
     if(guessmade==1){
-        guesses.innerHTML+="Previous Guess:";
+        guesses.textContent+="Previous Guess:";
     }
     guesses.innerHTML+=" "+guessnum;
     if(guessmade<=10){
         if(guessnum==randomNumber){
-            lastres.innerHTML="Congratulations! You got it right!";
+            lastres.textContent="Congratulations! You got it right!";
             if(lastres.classList.contains("wrong")){
                lastres.classList.remove("wrong"); 
             }
             lastres.classList.add("correct");
-            loworhi.innerHTML="";
+            loworhi.textContent="";
             gameover();
         }
         else{
-            lastres.innerHTML="Wrong!";
+            lastres.textContent="Wrong!";
             if(lastres.classList.contains("wrong")==false){
                 lastres.classList.add("wrong");
             }
             if(guessnum>randomNumber)
-                loworhi.innerHTML="Last guess was high!"
+                loworhi.textContent="Last guess was high!"
             else
-                loworhi.innerHTML="Last guess was low!";
+                loworhi.textContent="Last guess was low!";
         }
     }
     else{
-        lastres.innerHTML="!! GAME OVER !!";
+        lastres.textContent=`!! GAME OVER !! Correct Answer was ${randomNumber}`;
         gameover();
     }
     field.value="";
     field.focus();//focusses input field after a guess for further guesses
 }
 submit.addEventListener("click",check);
+
